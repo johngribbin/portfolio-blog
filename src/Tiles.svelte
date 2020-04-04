@@ -1,8 +1,20 @@
 <script>
   let tiles = [
-    { title: "Code", background: "./images/pattern28.jpg" },
-    { title: "Music", background: "./images/pattern49.jpg" },
-    { title: "Words", background: "./images/pattern47.jpg" }
+    {
+      title: "Code",
+      imgSrc: "./images/pattern28.jpg",
+      url: "https://github.com/johngribbin"
+    },
+    {
+      title: "Music",
+      imgSrc: "./images/pattern49.jpg",
+      url: "https://soundcloud.com/tampermusic"
+    },
+    {
+      title: "Words",
+      imgSrc: "./images/pattern47.jpg",
+      url: "https://medium.com/@johnggribbin"
+    }
   ];
 </script>
 
@@ -53,10 +65,10 @@
 
 <section>
   {#each tiles as tile}
-    <a href="https://github.com/johngribbin">
+    <a target="_blank" rel="noopener noreferrer" href={tile.url}>
       <div>
         <h2>{tile.title.toUpperCase()}</h2>
-        <img src={tile.background} alt="background" />
+        <img src={tile.imgSrc} alt="background" />
       </div>
     </a>
   {/each}
