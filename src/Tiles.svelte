@@ -3,17 +3,20 @@
     {
       title: "Code",
       imgSrc: "./images/pattern28.jpg",
-      url: "https://github.com/johngribbin"
+      url: "https://github.com/johngribbin",
+      selected: true
     },
     {
       title: "Music",
       imgSrc: "./images/pattern49.jpg",
-      url: "https://soundcloud.com/tampermusic"
+      url: "https://soundcloud.com/tampermusic",
+      selected: false
     },
     {
       title: "Words",
       imgSrc: "./images/pattern47.jpg",
-      url: "https://medium.com/@johnggribbin"
+      url: "https://medium.com/@johnggribbin",
+      selected: false
     }
   ];
 </script>
@@ -61,15 +64,22 @@
   img:hover {
     opacity: 0.2;
   }
+
+  .water {
+    border: 1pc solid red;
+  }
 </style>
 
 <section>
   {#each tiles as tile}
-    <a target="_blank" rel="noopener noreferrer" href={tile.url}>
-      <div>
-        <h2>{tile.title.toUpperCase()}</h2>
-        <img src={tile.imgSrc} alt="background" />
-      </div>
-    </a>
+    <div>
+      <h2>{tile.title.toUpperCase()}</h2>
+      <img src={tile.imgSrc} alt="background" on:click{} />
+    </div>
+  {/each}
+  {#each tiles as tile}
+    {#if tile.selected === true}
+      <p>{tile.title} is chosen</p>
+    {/if}
   {/each}
 </section>

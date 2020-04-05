@@ -32,6 +32,7 @@
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </h2>
+    <h2>johngribbin @ protonmail.com</h2>
   </section>
 
   <Tiles />
