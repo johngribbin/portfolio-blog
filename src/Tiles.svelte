@@ -19,6 +19,22 @@
       selected: false
     }
   ];
+
+  function selectTile(title) {
+    tiles = tiles.map(tile => {
+      if (title !== tile.title) {
+        return {
+          ...tile,
+          selected: false
+        };
+      } else {
+        return {
+          ...tile,
+          selected: true
+        };
+      }
+    });
+  }
 </script>
 
 <style>
@@ -64,19 +80,19 @@
   img:hover {
     opacity: 0.2;
   }
-
-  .water {
-    border: 1pc solid red;
-  }
 </style>
 
 <section>
   {#each tiles as tile}
     <div>
       <h2>{tile.title.toUpperCase()}</h2>
-      <img src={tile.imgSrc} alt="background" on:click{} />
+      <img
+        src={tile.imgSrc}
+        alt="background"
+        on:click={selectTile(tile.title)} />
     </div>
   {/each}
+
   {#each tiles as tile}
     {#if tile.selected === true}
       <p>{tile.title} is chosen</p>
