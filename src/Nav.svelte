@@ -27,26 +27,43 @@
   section {
     display: flex;
     margin-bottom: 3em;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
     height: 3em;
   }
 
-  div {
-    border-radius: 10px;
-    border: 3px dotted transparent;
+  .link__wrapper {
     position: relative;
     width: 100%;
-    height: 4em;
-    overflow: hidden;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.028),
-      0 6.7px 6.7px rgba(0, 0, 0, 0.042), 0 30px 30px rgba(0, 0, 0, 0.07);
   }
 
-  div:hover {
-    border: 3px dotted red;
+  .link__wrapper:hover,
+  .link__wrapper--active:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 1;
+  }
+
+  .link__wrapper--active {
+    width: 100%;
+    border-bottom: 5px solid black;
+    padding-bottom: 4.5em;
+  }
+
+  #code-link-wrapper {
+    margin-right: 0.5em;
+  }
+
+  #words-link-wrapper {
+    margin-left: 0.5em;
+  }
+
+  .link {
+    border-radius: 10px;
+    border: 3px dotted transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 4em;
+    overflow: hidden;
+    width: 100%;
   }
 
   img {
@@ -71,12 +88,13 @@
 
 <section>
   {#each navLinks as navLink}
-    <div>
-      <h2>{navLink.title.toUpperCase()}</h2>
-      <img
-        src={navLink.imgSrc}
-        alt="background"
-        on:click={() => setSkill(navLink.title)} />
+    <div
+      class={navLink.title === $skill ? 'link__wrapper--active' : 'link__wrapper'}
+      id={`${navLink.title}-link-wrapper`}>
+      <div class="link" on:click={() => setSkill(navLink.title)}>
+        <h2>{navLink.title.toUpperCase()}</h2>
+        <img src={navLink.imgSrc} alt="background" />
+      </div>
     </div>
   {/each}
 </section>
