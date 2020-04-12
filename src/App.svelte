@@ -1,10 +1,10 @@
 <script>
-  import Tiles from "./Tiles.svelte";
+  import { onDestroy } from "svelte";
+  import { skill } from "./stores.js";
+  import Nav from "./Nav.svelte";
+  import Code from "./Code.svelte";
   import Music from "./Music.svelte";
-
-  let src = "./images/pattern28.jpg";
-
-  let showMusic = false;
+  import Words from "./Words.svelte";
 </script>
 
 <style>
@@ -35,8 +35,14 @@
     <h2>johngribbin @ protonmail.com</h2>
   </section>
 
-  <Tiles />
-  {#if showMusic}
+  <Nav />
+
+  {#if $skill === 'music'}
     <Music />
+  {:else if $skill === 'code'}
+    <Code />
+  {:else if $skill === 'words'}
+    <Words />
   {/if}
+
 </main>
