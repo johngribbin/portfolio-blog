@@ -26,34 +26,9 @@
 <style>
   section {
     display: flex;
-    margin-bottom: 3em;
-    justify-content: space-between;
     height: 3em;
-  }
-
-  .link__wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  .link__wrapper:hover,
-  .link__wrapper--active:hover {
-    cursor: pointer;
-    opacity: 1;
-  }
-
-  .link__wrapper--active {
-    width: 100%;
-    border-bottom: 5px solid black;
-    padding-bottom: 4.5em;
-  }
-
-  #code-link-wrapper {
-    margin-right: 0.5em;
-  }
-
-  #words-link-wrapper {
-    margin-left: 0.5em;
+    justify-content: space-between;
+    margin-bottom: 5em;
   }
 
   .link {
@@ -64,6 +39,23 @@
     height: 4em;
     overflow: hidden;
     width: 100%;
+    padding-bottom: 1em;
+  }
+
+  .link:hover {
+    cursor: pointer;
+  }
+
+  #code-link {
+    margin-right: 0.5em;
+  }
+
+  #words-link {
+    margin-left: 0.5em;
+  }
+
+  .link--active {
+    border: 3px dotted black;
   }
 
   img {
@@ -80,21 +72,20 @@
   h2 {
     background: white;
     border-radius: 0px 0px 15px 0px;
-    position: absolute;
     margin: 0;
     padding: 0.25em 0.5em 0.25em 0.25em;
+    position: absolute;
   }
 </style>
 
 <section>
   {#each navLinks as navLink}
     <div
-      class={navLink.title === $skill ? 'link__wrapper--active' : 'link__wrapper'}
-      id={`${navLink.title}-link-wrapper`}>
-      <div class="link" on:click={() => setSkill(navLink.title)}>
-        <h2>{navLink.title.toUpperCase()}</h2>
-        <img src={navLink.imgSrc} alt="background" />
-      </div>
+      class={$skill === navLink.title ? 'link link--active' : 'link'}
+      id={`${navLink.title}-link`}
+      on:click={() => setSkill(navLink.title)}>
+      <h2>{navLink.title.toUpperCase()}</h2>
+      <img src={navLink.imgSrc} alt="background" />
     </div>
   {/each}
 </section>
