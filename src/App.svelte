@@ -37,12 +37,14 @@
 
   <Nav />
 
-  {#if $skill === 'music'}
-    <Music />
-  {:else if $skill === 'code'}
-    <Code />
-  {:else if $skill === 'words'}
-    <Words />
-  {/if}
+  <section>
+    {#if $skill === 'music'}
+      <Music />
+    {:else if $skill === 'code'}
+      <Code />
+    {:else if $skill === 'words'}
+      <Words />
+    {/if}
+  </section>
 
 </main>
