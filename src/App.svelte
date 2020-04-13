@@ -15,14 +15,15 @@
   }
 
   section {
-    border: 3px dotted black;
-    padding: 1em;
-    margin-bottom: 2em;
+    border: 1px solid black;
   }
 
   .footer {
+    border: 3px dotted black;
     bottom: 0;
+    padding: 1em;
     position: fixed;
+    margin-bottom: 1em;
   }
 </style>
 
