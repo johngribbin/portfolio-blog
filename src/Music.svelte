@@ -1,17 +1,84 @@
 <script>
-  let playlists = [
-    "https://open.spotify.com/embed/artist/6lqOL0LrdugmRcz6fPE3IF",
-    "https://open.spotify.com/embed/artist/4AxGcwEQdFCy1MlkyYgZ6y"
+  let projects = [
+    {
+      title: "Building Pictures",
+      releases: [
+        {
+          year: 2011,
+          title: "Training Up My Soul (EP)",
+          url: "https://open.spotify.com/embed/album/0vOe4kvOTP9vjNl9mRW7tj"
+        },
+        {
+          year: 2013,
+          title: "West Orchard (album)",
+          url: "https://open.spotify.com/embed/album/39EKHOTWE3qSYZkAhv4K0D"
+        },
+        {
+          year: 2018,
+          title: "If Only for a Day (single)",
+          url: "https://open.spotify.com/embed/album/2A68jiqrgqkMSFuzh700a8"
+        }
+      ],
+      playlist: "https://open.spotify.com/embed/album/39EKHOTWE3qSYZkAhv4K0D"
+    },
+    {
+      title: "Tamper",
+      releases: [
+        {
+          year: 2015,
+          title: "Tamper (EP)",
+          url: "https://open.spotify.com/embed/album/04GctAOVjACcWuTKzOBjpt"
+        },
+        {
+          year: 2016,
+          title: "Bought and Sold (EP)",
+          url: "https://open.spotify.com/embed/album/6clNFyBH1taw3nFJHQXdYT"
+        },
+        {
+          year: 2017,
+          title: "Eagle Bridge (EP)",
+          url: "https://open.spotify.com/embed/album/2uxh36EwPTf0UBdmzeyz88"
+        }
+      ],
+      playlist: "https://open.spotify.com/embed/album/2uxh36EwPTf0UBdmzeyz88"
+    }
   ];
+
+  let playlist = "https://open.spotify.com/embed/album/2uxh36EwPTf0UBdmzeyz88";
+
+  function changePlaylist(projectTitle, releaseUrl) {
+    projects = projects.map(project => {
+      if (project.title !== projectTitle) {
+        return project;
+      }
+
+      if (project.title === projectTitle) {
+        return { ...project, playlist: releaseUrl };
+      }
+    });
+  }
 </script>
 
 <style>
+  .blurb {
+    line-height: 1.2em;
+  }
+
   h2 {
     margin-bottom: 1em;
   }
 
-  p {
-    margin-bottom: 1em;
+  .projects__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3em 0em 2em 0em;
+  }
+
+  .project {
+    border: 1px solid grey;
+    padding: 1em;
+    width: 300px;
   }
 
   ul {
@@ -22,74 +89,53 @@
     list-style-type: square;
     margin-bottom: 1em;
   }
+
+  p {
+    color: rgb(0, 100, 200);
+    text-decoration: none;
+  }
+
+  p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  p:visited {
+    color: rgb(0, 80, 160);
+  }
 </style>
 
 <section>
-  <h2>
+  <h2 class="blurb">
     I started releasing music in 2011 under the pseudonym Building Pictures.
     This project helped me to move from Northern Ireland to the United States.
     In more recent years I have been releasing music with my friend Aaron for
     our band Tamper.
   </h2>
 
-  <section>
-    <ul>
-      <li>
-        <a
-          href="https://buildingpictures.bandcamp.com/album/training-up-my-soul"
-          target="_blank"
-          rel="noopener noreferrer">
-          2011 - Training Up My Soul (EP)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://open.spotify.com/album/39EKHOTWE3qSYZkAhv4K0D"
-          target="_blank"
-          rel="noopener noreferrer">
-          2013 - West Orchard (album)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://open.spotify.com/album/04GctAOVjACcWuTKzOBjpt"
-          target="_blank"
-          rel="noopener noreferrer">
-          2013 - Tamper (EP)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://open.spotify.com/album/6clNFyBH1taw3nFJHQXdYT"
-          target="_blank"
-          rel="noopener noreferrer">
-          2016 - Bought and Sold (EP)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://open.spotify.com/album/2uxh36EwPTf0UBdmzeyz88"
-          target="_blank"
-          rel="noopener noreferrer">
-          2017 - Eagle Bridge (EP)
-        </a>
-      </li>
-      <li>
-        <a href="#">Tamper debut album coming soon...</a>
-      </li>
-    </ul>
-
-  </section>
-
-  {#each playlists as playlist}
-    <iframe
-      title="spotify playlist"
-      src={playlist}
-      width="300"
-      height="380"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media" />
-  {/each}
+  <div class="projects__wrapper">
+    {#each projects as project (project.title)}
+      <div class="project">
+        <h2>{project.title}</h2>
+        <ul>
+          {#each project.releases as release (release.year)}
+            <li>
+              <p on:click={changePlaylist(project.title, release.url)}>
+                {release.year} - {release.title}
+              </p>
+            </li>
+          {/each}
+        </ul>
+        <iframe
+          title="spotify playlist"
+          src={project.playlist}
+          width="300"
+          height="80"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media" />
+      </div>
+    {/each}
+  </div>
 
 </section>

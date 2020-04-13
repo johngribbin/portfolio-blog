@@ -17,8 +17,6 @@
   ];
 
   function setSkill(skillChosen) {
-    console.log(skillChosen);
-
     skill.set(skillChosen);
   }
 </script>

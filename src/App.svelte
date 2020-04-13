@@ -19,22 +19,14 @@
     padding: 1em;
     margin-bottom: 2em;
   }
+
+  .footer {
+    bottom: 0;
+    position: fixed;
+  }
 </style>
 
 <main>
-  <section>
-    <h2>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </h2>
-    <h2>johngribbin @ protonmail.com</h2>
-  </section>
-
   <Nav />
 
   <section>
@@ -47,4 +39,7 @@
     {/if}
   </section>
 
+  <section class="footer">
+    <h2>johngribbin @ protonmail.com</h2>
+  </section>
 </main>
