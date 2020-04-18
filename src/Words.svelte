@@ -23,9 +23,14 @@
     flex-direction: column;
   }
 
-  .blurb {
-    line-height: 1.2em;
+  .copy {
+    margin-bottom: 3em;
+    line-height: 1.2;
+  }
+
+  .copy p {
     margin-bottom: 1em;
+    font-size: 25px;
   }
 
   ul {
@@ -39,7 +44,9 @@
 </style>
 
 <section>
-  <h2 class="blurb">Sometimes I enjoy writing.</h2>
+  <div class="copy">
+    <p>Sometimes I enjoy writing.</p>
+  </div>
 
   <ul>
     {#each posts as post (post.link)}

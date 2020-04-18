@@ -2,6 +2,7 @@
   const projects = [
     {
       title: "TruSat",
+      imgSrc: "./images/trusat.jpg",
       description:
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
       code_link: "https://github.com/TruSat/trusat-frontend",
@@ -9,6 +10,7 @@
     },
     {
       title: "Tractor Beam",
+      imgSrc: "./images/tractorbeam.jpg",
       description:
         "Mobile application (React Native) to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
       code_link: "https://github.com/johngribbin/tractor-beam",
@@ -16,6 +18,7 @@
     },
     {
       title: "SSA Toshi",
+      imgSrc: "./images/ssatoshi.jpg",
       description:
         "A smart-contract research project to examine permissioning.",
       code_link: "https://github.com/johngribbin/ssa-toshi",
@@ -23,6 +26,8 @@
     },
     {
       title: "Crypto Hitters",
+      imgSrc: "./images/cryptohitters.jpg",
+
       description:
         "A web app that brings together price changes in crypto assets and the news/gossip that may have caused them.",
       code_link: "https://github.com/johngribbin/crypto-hitters",
@@ -33,13 +38,17 @@
 
 <style>
   .copy {
-    //border: 1px solid red;
     margin-bottom: 3em;
-    line-height: 1.2em;
+    line-height: 1.2;
+  }
+
+  .copy h2 {
+    font-size: 25px;
   }
 
   .copy p {
     margin-bottom: 1em;
+    font-size: 25px;
   }
 
   .copy ul {
@@ -59,17 +68,24 @@
   }
 
   .projects__wrapper h2 {
+    font-size: 25px;
     margin-bottom: 1em;
   }
 
   .project {
     border: 1px solid grey;
-    padding: 1em 0;
+    display: flex;
     margin-bottom: 2em;
     width: 100%;
   }
 
+  .project img {
+    height: auto;
+    width: 500px;
+  }
+
   .project h2 {
+    font-size: 25px;
     margin-bottom: 0.25em;
   }
 
@@ -77,9 +93,16 @@
     margin-bottom: 1em;
   }
 
+  .project__image-content-wrapper {
+    display: flex;
+  }
+
+  .project__content-wrapper {
+    margin-left: 1em;
+  }
+
   .project__links-wrapper {
     display: flex;
-    justify-content: space-between;
   }
 </style>
 
@@ -87,8 +110,8 @@
 
   <div class="copy">
     <p>
-      After reading the Bitcoin whitepaper I decided I should learn to code.
-      Currently I lead all front-end development at
+      Inspired by reading the Bitcoin whitepaper I decided I should learn to
+      code. Currently I lead all front-end development at
       <a
         href="https://consensys.space"
         target="_blank"
@@ -96,8 +119,11 @@
         ConsenSys Space.
       </a>
       We build awesome open-source collaboration platforms to diversify,
-      democratize, and decentralize space endeavors. I spend a lot of time in
-      React and Svelte projects, but I am very much framework agnostic.
+      democratize, and decentralize space endeavors.
+    </p>
+    <p>
+      Althought I am framework agnostic, my personal favorites are React and
+      Svelte.
     </p>
   </div>
 
@@ -127,17 +153,25 @@
     <h2>Projects</h2>
     {#each projects as project}
       <div class="project">
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
-        <div class="project__links-wrapper">
-          <a href={project.live_link} target="_blank" rel="noopener noreferrer">
-            Live
-          </a>
-          <a href={project.code_link} target="_blank" rel="noopener noreferrer">
-            Code
-          </a>
+        <img src={project.imgSrc} alt={project.title} />
+        <div class="project__content-wrapper">
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+          <div class="project__links-wrapper">
+            <a
+              href={project.live_link}
+              target="_blank"
+              rel="noopener noreferrer">
+              Live
+            </a>
+            <a
+              href={project.code_link}
+              target="_blank"
+              rel="noopener noreferrer">
+              Code
+            </a>
+          </div>
         </div>
-
       </div>
     {/each}
   </div>

@@ -60,12 +60,14 @@
 </script>
 
 <style>
-  .blurb {
-    line-height: 1.2em;
+  .copy {
+    margin-bottom: 3em;
+    line-height: 1.2;
   }
 
-  h2 {
+  .copy p {
     margin-bottom: 1em;
+    font-size: 25px;
   }
 
   .projects__wrapper {
@@ -81,6 +83,10 @@
     width: 300px;
   }
 
+  .project h2 {
+    margin-bottom: 1em;
+  }
+
   ul {
     padding-left: 1em;
   }
@@ -90,28 +96,30 @@
     margin-bottom: 1em;
   }
 
-  p {
+  .project p {
     color: rgb(0, 100, 200);
     text-decoration: none;
   }
 
-  p:hover {
+  .project p:hover {
     cursor: pointer;
     text-decoration: underline;
   }
 
-  p:visited {
+  .project p:visited {
     color: rgb(0, 80, 160);
   }
 </style>
 
 <section>
-  <h2 class="blurb">
-    I started releasing music in 2011 under the pseudonym Building Pictures.
-    This project helped me to move from Northern Ireland to the United States.
-    In more recent years I have been releasing music with my friend Aaron for
-    our band Tamper.
-  </h2>
+  <div class="copy">
+    <p>
+      I started releasing music in 2011 under the pseudonym Building Pictures.
+      This project helped me to move from Northern Ireland to the United States.
+      In more recent years I have been releasing music with my friend Aaron for
+      our band Tamper.
+    </p>
+  </div>
 
   <div class="projects__wrapper">
     {#each projects as project (project.title)}
