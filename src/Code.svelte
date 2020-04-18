@@ -32,23 +32,41 @@
 </script>
 
 <style>
-  .blurb {
-    margin-bottom: 1em;
+  .copy {
+    //border: 1px solid red;
+    margin-bottom: 3em;
     line-height: 1.2em;
   }
 
-  .projects__wrapper {
+  .copy p {
+    margin-bottom: 1em;
+  }
+
+  .copy ul {
     display: flex;
+    list-style-type: circle;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 1em 0em 2em 0em;
+    margin-top: 0.5em;
+  }
+
+  .copy li {
+    margin: 0.5em 2em 0em 1.25em;
+  }
+
+  .projects__wrapper {
+    //border: 1px solid red;
+    margin-bottom: 6em;
+  }
+
+  .projects__wrapper h2 {
+    margin-bottom: 1em;
   }
 
   .project {
     border: 1px solid grey;
-    padding: 1em;
-    margin-top: 2em;
-    width: 300px;
+    padding: 1em 0;
+    margin-bottom: 2em;
+    width: 100%;
   }
 
   .project h2 {
@@ -67,16 +85,46 @@
 
 <section>
 
-  <h2 class="blurb">
-    Currently I am employed by Consensys where I lead all front-end development
-    (mobile and web) on space sustainability project
-    <a href="https://trusat.org" target="_blank" rel="noopener noreferrer">
-      TruSat.
-    </a>
-    Some of my recent work:
-  </h2>
+  <div class="copy">
+    <p>
+      After reading the Bitcoin whitepaper I decided I should learn to code.
+      Currently I lead all front-end development at
+      <a
+        href="https://consensys.space"
+        target="_blank"
+        rel="noopener noreferrer">
+        ConsenSys Space.
+      </a>
+      We build awesome open-source collaboration platforms to diversify,
+      democratize, and decentralize space endeavors. I spend a lot of time in
+      React and Svelte projects, but I am very much framework agnostic.
+    </p>
+  </div>
+
+  <div class="copy">
+    <h2>Skills</h2>
+    <ul>
+      <li>JavaScript ES6</li>
+      <li>React</li>
+      <li>React Native</li>
+      <li>Git</li>
+      <li>HTML & CSS</li>
+      <li>Styled-Components</li>
+      <li>Svelte</li>
+      <li>Redux</li>
+      <li>AWS</li>
+      <li>Netlify</li>
+      <li>Firebase</li>
+      <li>Agile Software Development</li>
+      <li>Test-driven Development</li>
+      <li>Node</li>
+      <li>Solidity</li>
+      <li>Python</li>
+    </ul>
+  </div>
 
   <div class="projects__wrapper">
+    <h2>Projects</h2>
     {#each projects as project}
       <div class="project">
         <h2>{project.title}</h2>
