@@ -38,7 +38,7 @@
 
 <style>
   .copy {
-    margin-bottom: 3em;
+    margin-bottom: 4em;
     line-height: 1.2;
   }
 
@@ -75,7 +75,7 @@
   .project {
     border: 1px solid grey;
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     width: 100%;
   }
 

@@ -71,6 +71,7 @@
   }
 
   .projects__wrapper {
+    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -78,8 +79,7 @@
   }
 
   .project {
-    border: 1px solid grey;
-    padding: 1em;
+    border: 1px solid red;
     width: 300px;
   }
 
