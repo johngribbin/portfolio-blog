@@ -5,6 +5,7 @@
       imgSrc: "./images/trusat.jpg",
       description:
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
+      stack: ["React", "Sass", "Ethers.js", "AWS"],
       code_link: "https://github.com/TruSat/trusat-frontend",
       live_link: "https://trusat.org/"
     },
@@ -12,7 +13,8 @@
       title: "Tractor Beam",
       imgSrc: "./images/tractorbeam.jpg",
       description:
-        "Mobile application (React Native) to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
+        "Mobile application to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
+      stack: ["React Native", "Redux", "Formik", "Ethers.js", "Expo"],
       code_link: "https://github.com/johngribbin/tractor-beam",
       live_link: null
     },
@@ -20,16 +22,17 @@
       title: "SSA Toshi",
       imgSrc: "./images/ssatoshi.jpg",
       description:
-        "A smart-contract research project to examine permissioning.",
+        "A Ethereum smart-contract research project to examine permissioning.",
+      stack: ["React", "Solidity", "Truffle", "ethers.js"],
       code_link: "https://github.com/johngribbin/ssa-toshi",
       live_link: "https://ssatoshi.surge.sh/"
     },
     {
       title: "Crypto Hitters",
       imgSrc: "./images/cryptohitters.jpg",
-
       description:
         "A web app that brings together price changes in crypto assets and the news/gossip that may have caused them.",
+      stack: ["React", "Chart.js", "Netlify"],
       code_link: "https://github.com/johngribbin/crypto-hitters",
       live_link: "https://cryptohitters.com"
     }
@@ -37,55 +40,49 @@
 </script>
 
 <style>
-  .copy {
+  .skills {
+    border: 1px solid red;
     margin-bottom: 4em;
-    line-height: 1.2;
+    max-width: 900px;
   }
 
-  .copy h2 {
-    font-size: 25px;
-  }
-
-  .copy p {
+  p {
     margin-bottom: 1em;
-    font-size: 25px;
   }
 
-  .copy ul {
+  .skills ul {
     display: flex;
     list-style-type: circle;
     flex-wrap: wrap;
     margin-top: 0.5em;
   }
 
-  .copy li {
+  .skills li {
     margin: 0.5em 2em 0em 1.25em;
   }
 
   .projects__wrapper {
-    //border: 1px solid red;
-    margin-bottom: 6em;
+    border: 1px solid red;
+    max-width: 900px;
   }
 
   .projects__wrapper h2 {
-    font-size: 25px;
     margin-bottom: 1em;
   }
 
   .project {
-    border: 1px solid grey;
     display: flex;
-    margin-bottom: 4em;
-    width: 100%;
+    margin-bottom: 6em;
+    width: 900px;
   }
 
   .project img {
     height: auto;
-    width: 500px;
+    max-width: 600px;
+    width: 100%;
   }
 
   .project h2 {
-    font-size: 25px;
     margin-bottom: 0.25em;
   }
 
@@ -93,48 +90,60 @@
     margin-bottom: 1em;
   }
 
-  .project__image-content-wrapper {
-    display: flex;
-  }
-
   .project__content-wrapper {
     margin-left: 1em;
+    width: 300px;
+  }
+
+  .project__content-wrapper h3 {
+    font-weight: bold;
+  }
+
+  .project__content-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: circle;
+    margin-left: -0.3em;
+  }
+
+  .project__content-wrapper li {
+    margin-left: 1.5em;
+    margin-top: 0.5em;
   }
 
   .project__links-wrapper {
     display: flex;
+    margin-top: 2em;
+  }
+
+  .project__link-button {
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+    border: 2px solid black;
+    display: flex;
+    font-weight: bold;
+    margin-right: 1em;
+    padding: 0.75em;
+  }
+
+  .project__link-button img {
+    margin-right: 0.5em;
+    width: 32px;
   }
 </style>
 
 <section>
-
-  <div class="copy">
-    <p>
-      Inspired by reading the Bitcoin whitepaper I decided I should learn to
-      code. Currently I lead all front-end development at
-      <a
-        href="https://consensys.space"
-        target="_blank"
-        rel="noopener noreferrer">
-        ConsenSys Space.
-      </a>
-      We build awesome open-source collaboration platforms to diversify,
-      democratize, and decentralize space endeavors.
-    </p>
-    <p>
-      Althought I am framework agnostic, my personal favorites are React and
-      Svelte.
-    </p>
-  </div>
-
-  <div class="copy">
-    <h2>Skills</h2>
+  <div class="skills">
+    <h1>Skills</h1>
     <ul>
       <li>JavaScript ES6</li>
       <li>React</li>
       <li>React Native</li>
       <li>Git</li>
       <li>HTML & CSS</li>
+      <li>Formik</li>
+      <li>Sass</li>
       <li>Styled-Components</li>
       <li>Svelte</li>
       <li>Redux</li>
@@ -150,25 +159,33 @@
   </div>
 
   <div class="projects__wrapper">
-    <h2>Projects</h2>
     {#each projects as project}
       <div class="project">
         <img src={project.imgSrc} alt={project.title} />
         <div class="project__content-wrapper">
           <h2>{project.title}</h2>
           <p>{project.description}</p>
+          <h3>Stack:</h3>
+          <ul>
+            {#each project.stack as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
           <div class="project__links-wrapper">
             <a
+              class="project__link-button"
               href={project.live_link}
               target="_blank"
               rel="noopener noreferrer">
-              Live
+              VIEW APP
             </a>
             <a
+              class="project__link-button"
               href={project.code_link}
               target="_blank"
               rel="noopener noreferrer">
-              Code
+              <img src="./images/github-icon.png" alt="github" />
+              CODE
             </a>
           </div>
         </div>

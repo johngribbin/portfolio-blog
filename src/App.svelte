@@ -2,6 +2,7 @@
   import { onDestroy } from "svelte";
   import { skill } from "./stores.js";
   import Nav from "./Nav.svelte";
+  import Socials from "./Socials.svelte";
   import Code from "./Code.svelte";
   import Music from "./Music.svelte";
   import Words from "./Words.svelte";
@@ -10,22 +11,50 @@
 <style>
   main {
     margin: 0 auto;
+    padding-top: 4em;
     max-width: 1200px;
-    padding: 1em;
   }
 
   section {
     //border: 1px solid black;
   }
 
-  .footer {
-    border: 3px dotted black;
-    padding: 1em;
+  .copy {
+    border: 1px solid red;
+    margin-bottom: 6em;
+    max-width: 600px;
+  }
+
+  p {
+    margin-bottom: 1em;
   }
 </style>
 
 <main>
-  <Nav />
+  <!-- <Nav /> -->
+  <div class="copy">
+    <p>
+      Inspired by the Bitcoin whitepaper I decided it was time to learn to code.
+    </p>
+
+    <p>
+      Currently I lead all front-end development at
+      <a
+        href="https://consensys.space"
+        target="_blank"
+        rel="noopener noreferrer">
+        ConsenSys Space.
+      </a>
+      We build awesome open-source collaboration platforms to diversify,
+      democratize, and decentralize space endeavors.
+    </p>
+    <p>
+      Although I am framework agnostic, my personal favorites are React and
+      Svelte.
+    </p>
+
+    <Socials />
+  </div>
 
   <section>
     {#if $skill === 'music'}
@@ -37,7 +66,4 @@
     {/if}
   </section>
 
-  <section class="footer">
-    <h2>johngribbin @ protonmail.com</h2>
-  </section>
 </main>

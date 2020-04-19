@@ -62,7 +62,7 @@
 <style>
   .copy {
     margin-bottom: 3em;
-    line-height: 1.2;
+    max-width: 600px;
   }
 
   .copy p {

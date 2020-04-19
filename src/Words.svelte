@@ -25,7 +25,6 @@
 
   .copy {
     margin-bottom: 3em;
-    line-height: 1.2;
   }
 
   .copy p {
