@@ -40,58 +40,31 @@
 </script>
 
 <style>
-  .skills {
-    border: 1px solid red;
-    margin-bottom: 4em;
-    max-width: 900px;
-  }
-
-  p {
-    margin-bottom: 1em;
-  }
-
-  .skills ul {
-    display: flex;
-    list-style-type: circle;
-    flex-wrap: wrap;
-    margin-top: 0.5em;
-  }
-
-  .skills li {
-    margin: 0.5em 2em 0em 1.25em;
-  }
-
   .projects__wrapper {
-    border: 1px solid red;
-    max-width: 900px;
-  }
-
-  .projects__wrapper h2 {
-    margin-bottom: 1em;
+    max-width: 1000px;
   }
 
   .project {
     display: flex;
-    margin-bottom: 6em;
-    width: 900px;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
   }
 
-  .project img {
-    height: auto;
+  .project__image-container {
+    margin: 0em 3em 1em 0em;
     max-width: 600px;
+  }
+
+  .project__image-container img {
+    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.4);
     width: 100%;
   }
 
-  .project h2 {
-    margin-bottom: 0.25em;
-  }
-
   .project p {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   .project__content-wrapper {
-    margin-left: 1em;
     width: 300px;
   }
 
@@ -99,7 +72,12 @@
     font-weight: bold;
   }
 
+  .project__content-wrapper p {
+    margin-top: 1em;
+  }
+
   .project__content-wrapper ul {
+    color: black;
     display: flex;
     flex-wrap: wrap;
     list-style-type: circle;
@@ -131,39 +109,31 @@
     margin-right: 0.5em;
     width: 32px;
   }
+
+  @media (max-width: 800px) {
+    .project__image-container {
+      margin: 0em 0em 1em 0em;
+    }
+
+    .project__content-wrapper {
+      padding: 0em 2em 0em 2em;
+    }
+  }
 </style>
 
 <section>
-  <div class="skills">
-    <h1>Skills</h1>
-    <ul>
-      <li>JavaScript ES6</li>
-      <li>React</li>
-      <li>React Native</li>
-      <li>Git</li>
-      <li>HTML & CSS</li>
-      <li>Formik</li>
-      <li>Sass</li>
-      <li>Styled-Components</li>
-      <li>Svelte</li>
-      <li>Redux</li>
-      <li>AWS</li>
-      <li>Netlify</li>
-      <li>Firebase</li>
-      <li>Agile Software Development</li>
-      <li>Test-driven Development</li>
-      <li>Node</li>
-      <li>Solidity</li>
-      <li>Python</li>
-    </ul>
-  </div>
-
   <div class="projects__wrapper">
     {#each projects as project}
       <div class="project">
-        <img src={project.imgSrc} alt={project.title} />
+        <div class="project__image-container photo">
+          <img src={project.imgSrc} alt={project.title} />
+          <div class="glow-wrap">
+            <i class="glow" />
+          </div>
+        </div>
+
         <div class="project__content-wrapper">
-          <h2>{project.title}</h2>
+          <h1>{project.title}</h1>
           <p>{project.description}</p>
           <h3>Stack:</h3>
           <ul>

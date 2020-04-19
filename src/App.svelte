@@ -10,23 +10,28 @@
 
 <style>
   main {
-    margin: 0 auto;
-    padding-top: 4em;
+    margin: 4em auto;
     max-width: 1200px;
   }
 
-  section {
-    //border: 1px solid black;
-  }
-
   .copy {
-    border: 1px solid red;
     margin-bottom: 6em;
     max-width: 600px;
   }
 
   p {
+    font-size: 18px;
     margin-bottom: 1em;
+  }
+
+  @media (max-width: 600px) {
+    main {
+      margin-top: 2em;
+    }
+
+    .copy {
+      padding: 0em 2em 0em 2em;
+    }
   }
 </style>
 
