@@ -2,7 +2,8 @@
   const projects = [
     {
       title: "TruSat",
-      imgSrc: "./images/trusat.jpg",
+      imgSrc:
+        "https://live.staticflickr.com/65535/49797961373_70a4eab969_o.jpg",
       description:
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
       stack: ["React", "Sass", "Ethers.js", "AWS"],
@@ -15,7 +16,8 @@
     },
     {
       title: "Tractor Beam",
-      imgSrc: "./images/tractorbeam.jpg",
+      imgSrc:
+        "https://live.staticflickr.com/65535/49798515956_658f99571c_o.jpg",
       description:
         "Mobile application to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
       stack: ["React Native", "Redux", "Formik", "Ethers.js", "Expo"],
@@ -28,7 +30,8 @@
     },
     {
       title: "SSA Toshi",
-      imgSrc: "./images/ssatoshi.jpg",
+      imgSrc:
+        "https://live.staticflickr.com/65535/49797975653_7bf619754b_o.jpg",
       description:
         "A Ethereum smart-contract research project to examine permissioning.",
       stack: ["React", "Solidity", "Truffle", "ethers.js"],
@@ -41,7 +44,8 @@
     },
     {
       title: "Crypto Hitters",
-      imgSrc: "./images/cryptohitters.jpg",
+      imgSrc:
+        "https://live.staticflickr.com/65535/49798834422_f950cde020_o.jpg",
       description:
         "A web app that brings together price changes in crypto assets and the news/gossip that may have caused them.",
       stack: ["React", "Chart.js", "Netlify"],
@@ -64,7 +68,7 @@
 
   .project__image-container {
     margin: 0em 3em 1em 0em;
-    max-width: 550px;
+    width: 550px;
   }
 
   .project__image-container img {
@@ -169,7 +173,9 @@
             href={project.code_link}
             target="_blank"
             rel="noopener noreferrer">
-            <img src="./images/github-icon.png" alt="github" />
+            <img
+              src="https://live.staticflickr.com/65535/49798531141_f7e30a48c0_t.jpg"
+              alt="github" />
             CODE
           </a>
         </div>

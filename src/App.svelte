@@ -1,7 +1,6 @@
 <script>
   import { onDestroy } from "svelte";
   import { skill } from "./stores.js";
-  import Nav from "./Nav.svelte";
   import Socials from "./Socials.svelte";
   import Code from "./Code.svelte";
   import Music from "./Music.svelte";
