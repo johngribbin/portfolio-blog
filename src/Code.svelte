@@ -56,10 +56,6 @@
 </script>
 
 <style>
-  .projects__wrapper {
-    max-width: 1200px;
-  }
-
   .project {
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +64,7 @@
 
   .project__image-container {
     margin: 0em 3em 1em 0em;
-    max-width: 600px;
+    max-width: 550px;
   }
 
   .project__image-container img {
@@ -84,10 +80,6 @@
     width: 550px;
   }
 
-  .project__stack-header {
-    font-weight: bold;
-  }
-
   .project__content-wrapper p {
     margin-top: 1em;
   }
@@ -98,11 +90,13 @@
     flex-wrap: wrap;
     list-style-type: circle;
     margin-bottom: 1em;
-    margin-left: -0.3em;
+    margin-left: 0.7em;
   }
 
   .project__content-wrapper li {
-    margin-left: 1.5em;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.25em 1.5em 0.25em 0.5em;
   }
 
   .project__links-wrapper {
@@ -142,47 +136,45 @@
 </style>
 
 <section>
-  <div class="projects__wrapper">
-    {#each projects as project}
-      <div class="project">
-        <div class="project__image-container photo">
-          <img src={project.imgSrc} alt={project.title} />
-          <div class="glow-wrap">
-            <i class="glow" />
-          </div>
-        </div>
 
-        <div class="project__content-wrapper">
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-          <p>{project.purpose}</p>
-          <p class="project__stack-header">Stack:</p>
-          <ul>
-            {#each project.stack as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <p>{project.stack_explainer}</p>
-          <div class="project__links-wrapper">
-            <a
-              class="project__link-button"
-              href={project.live_link}
-              target="_blank"
-              rel="noopener noreferrer">
-              VIEW APP
-            </a>
-            <a
-              class="project__link-button"
-              href={project.code_link}
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src="./images/github-icon.png" alt="github" />
-              CODE
-            </a>
-          </div>
+  {#each projects as project}
+    <div class="project">
+      <div class="project__image-container photo">
+        <img src={project.imgSrc} alt={project.title} />
+        <div class="glow-wrap">
+          <i class="glow" />
         </div>
       </div>
-    {/each}
-  </div>
+
+      <div class="project__content-wrapper">
+        <h1>{project.title}</h1>
+        <p>{project.description}</p>
+        <p>{project.purpose}</p>
+        <ul>
+          {#each project.stack as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+        <p>{project.stack_explainer}</p>
+        <div class="project__links-wrapper">
+          <a
+            class="project__link-button"
+            href={project.live_link}
+            target="_blank"
+            rel="noopener noreferrer">
+            VIEW APP
+          </a>
+          <a
+            class="project__link-button"
+            href={project.code_link}
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="./images/github-icon.png" alt="github" />
+            CODE
+          </a>
+        </div>
+      </div>
+    </div>
+  {/each}
 
 </section>

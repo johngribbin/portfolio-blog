@@ -11,12 +11,12 @@
 <style>
   main {
     margin: 4em auto;
-    max-width: 1200px;
+    max-width: 1150px;
   }
 
   .copy {
     margin-bottom: 6em;
-    max-width: 600px;
+    max-width: 550px;
   }
 
   p {
