@@ -1,4 +1,7 @@
 <script>
+  import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
+
   const projects = [
     {
       title: "TruSat",
@@ -57,6 +60,12 @@
       live_link: "https://cryptohitters.com"
     }
   ];
+
+  let visible = false;
+
+  onMount(() => {
+    visible = true;
+  });
 </script>
 
 <style>
@@ -140,47 +149,47 @@
 </style>
 
 <section>
+  {#if visible}
+    {#each projects as project}
+      <div in:fade={{ duration: 1000 }} class="project">
+        <div class="project__image-container photo">
+          <img src={project.imgSrc} alt={project.title} />
+          <div class="glow-wrap">
+            <i class="glow" />
+          </div>
+        </div>
 
-  {#each projects as project}
-    <div class="project">
-      <div class="project__image-container photo">
-        <img src={project.imgSrc} alt={project.title} />
-        <div class="glow-wrap">
-          <i class="glow" />
+        <div class="project__content-wrapper">
+          <h1>{project.title}</h1>
+          <p>{project.description}</p>
+          <!-- <p>{project.purpose}</p> -->
+          <ul>
+            {#each project.stack as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
+          <!-- <p>{project.stack_explainer}</p> -->
+          <div class="project__links-wrapper">
+            <a
+              class="project__link-button"
+              href={project.live_link}
+              target="_blank"
+              rel="noopener noreferrer">
+              VIEW APP
+            </a>
+            <a
+              class="project__link-button"
+              href={project.code_link}
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                src="https://live.staticflickr.com/65535/49798531141_f7e30a48c0_t.jpg"
+                alt="github" />
+              CODE
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="project__content-wrapper">
-        <h1>{project.title}</h1>
-        <p>{project.description}</p>
-        <p>{project.purpose}</p>
-        <ul>
-          {#each project.stack as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
-        <p>{project.stack_explainer}</p>
-        <div class="project__links-wrapper">
-          <a
-            class="project__link-button"
-            href={project.live_link}
-            target="_blank"
-            rel="noopener noreferrer">
-            VIEW APP
-          </a>
-          <a
-            class="project__link-button"
-            href={project.code_link}
-            target="_blank"
-            rel="noopener noreferrer">
-            <img
-              src="https://live.staticflickr.com/65535/49798531141_f7e30a48c0_t.jpg"
-              alt="github" />
-            CODE
-          </a>
-        </div>
-      </div>
-    </div>
-  {/each}
-
+    {/each}
+  {/if}
 </section>

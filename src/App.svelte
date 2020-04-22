@@ -1,10 +1,18 @@
 <script>
-  import { onDestroy } from "svelte";
+  import { onMount } from "svelte";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   import { skill } from "./stores.js";
   import Socials from "./Socials.svelte";
   import Code from "./Code.svelte";
   import Music from "./Music.svelte";
   import Words from "./Words.svelte";
+
+  let visible = false;
+
+  onMount(() => {
+    visible = true;
+  });
 </script>
 
 <style>
@@ -35,30 +43,32 @@
 </style>
 
 <main>
-  <!-- <Nav /> -->
-  <div class="copy">
-    <p>
-      Inspired by the Bitcoin whitepaper I decided it was time to learn to code.
-    </p>
+  {#if visible}
+    <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
+      <p>
+        Inspired by the Bitcoin whitepaper I decided it was time to learn to
+        code.
+      </p>
 
-    <p>
-      Currently I lead all front-end development at
-      <a
-        href="https://consensys.space"
-        target="_blank"
-        rel="noopener noreferrer">
-        ConsenSys Space.
-      </a>
-      We build awesome open-source collaboration platforms to diversify,
-      democratize, and decentralize space endeavors.
-    </p>
-    <p>
-      Although I am framework agnostic, my personal favorites are React and
-      Svelte.
-    </p>
+      <p>
+        Currently I lead all front-end development at
+        <a
+          href="https://consensys.space"
+          target="_blank"
+          rel="noopener noreferrer">
+          ConsenSys Space.
+        </a>
+        We build awesome open-source collaboration platforms to diversify,
+        democratize, and decentralize space endeavors.
+      </p>
+      <p>
+        Although I am framework agnostic, my personal favorites are React and
+        Svelte.
+      </p>
 
-    <Socials />
-  </div>
+      <Socials />
+    </div>
+  {/if}
 
   <section>
     {#if $skill === 'music'}
