@@ -11,9 +11,9 @@
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
       stack: ["React", "Sass", "Ethers.js", "AWS"],
       purpose:
-        "We built this project because we know how tedious and repetitive starting a new project from scratch can be, and we wanted to build something that we would also use ourselves. We had a timeframe of a little over a month to build out this project, and our goal was to have the application fully functioning by the end of that timeframe.",
+        "This project was created with the goal of providing the world with a community driven and fully transparent alternative to the centralized services that offer orbital prediction data for satellites. The big challenge for us was to combine education on the “sport” of tracking satellites and at the same time ensure that the UX was optimal. We paired the app with docs that are as much about learning how to track a sat as they are about submitting data to the platform.",
       stack_explainer:
-        "React was the clear choice for this project, because of its ease of state management and the amount of packages available. We also utilized Netlify as a server to host Decore, because it allows live updates alongside github. In the future, we hope to add Redux to this project to clean up the states a bit, and we also are looking into a backend that can allow writing to files so users can download the code right to their computer.",
+        "All state management is handled by React Hooks, without the need for an additional library like Redux. All users are identified by their pseudonymous Ethereum addresses, with authentication aided with the help of Ethers.js and the MetaMask plugin. We also built a custom signup experience that encrypts an Ethereum wallet and emails this to the user as a “secret” to allow users to identify themselves. All assets are stored in AWS S3 buckets.",
       code_link: "https://github.com/TruSat/trusat-frontend",
       live_link: "https://trusat.org/"
     },
@@ -25,9 +25,9 @@
         "Mobile application to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
       stack: ["React Native", "Redux", "Formik", "Ethers.js", "Expo"],
       purpose:
-        "We built this project because we know how tedious and repetitive starting a new project from scratch can be, and we wanted to build something that we would also use ourselves. We had a timeframe of a little over a month to build out this project, and our goal was to have the application fully functioning by the end of that timeframe.",
+        "This was an R&D project at ConsenSys to showcase a new way to on-boarding users to the Ethereum network that was made possible by the introduction of the CREATE2 opcode. In a nutshell, decentralized app users can now receive and withdraw tokens from their account without requiring the additional step of acquiring Ether to pay transaction costs. The transaction fees are instead covered by the application, after getting permission to debit the tokens the equivalent amount. The biggest challenge was abstracting as much complexity away from the user as possible while at same time being transparent about the permissions that the user was granting to the app creators under the hood.",
       stack_explainer:
-        "React was the clear choice for this project, because of its ease of state management and the amount of packages available. We also utilized Netlify as a server to host Decore, because it allows live updates alongside github. In the future, we hope to add Redux to this project to clean up the states a bit, and we also are looking into a backend that can allow writing to files so users can download the code right to their computer.",
+        "I used React-Native to build out the app. As the state for the application grew I decided to introduce Redux to handle the state management.",
       code_link: "https://github.com/johngribbin/tractor-beam",
       live_link: null
     },
@@ -39,9 +39,9 @@
         "A Ethereum smart-contract research project to examine permissioning.",
       stack: ["React", "Solidity", "Truffle", "ethers.js"],
       purpose:
-        "We built this project because we know how tedious and repetitive starting a new project from scratch can be, and we wanted to build something that we would also use ourselves. We had a timeframe of a little over a month to build out this project, and our goal was to have the application fully functioning by the end of that timeframe.",
+        "I created this project at ConsenSys Space to help provide an example to my team mates of how smart contract permissions could be used for community curation of satellite observations in TruSat. On page loads a “burner wallet” is generated in the browser to provide the user with a unique Ethereum address (a pseudonymous identity). After adding some test-net Ether to their address, visitors can clicking the “confirm” button under each picture to update the state of a smart contract. This step essentially symbolizes how anyone could add a vote of confidence to a sat observation. Some of the permissions in the contract prevent Ethereum addresses that submit observations from voting on their own submissions.",
       stack_explainer:
-        "React was the clear choice for this project, because of its ease of state management and the amount of packages available. We also utilized Netlify as a server to host Decore, because it allows live updates alongside github. In the future, we hope to add Redux to this project to clean up the states a bit, and we also are looking into a backend that can allow writing to files so users can download the code right to their computer.",
+        "I used Truffle to deploy the smart contracts to an Ethereum testnet. The front end was built with React, and Ethers.js was used to help interact with the deployed smart contract. ",
       code_link: "https://github.com/johngribbin/ssa-toshi",
       live_link: "https://ssatoshi.surge.sh/"
     },
@@ -53,9 +53,9 @@
         "A web app that brings together price changes in crypto assets and the news/gossip that may have caused them.",
       stack: ["React", "Chart.js", "Netlify"],
       purpose:
-        "We built this project because we know how tedious and repetitive starting a new project from scratch can be, and we wanted to build something that we would also use ourselves. We had a timeframe of a little over a month to build out this project, and our goal was to have the application fully functioning by the end of that timeframe.",
+        "When I first got interested in the cryptocurrency space I would spend a lot of time jumping between websites that offer price data and various reddit forums that gather gossip or news about a given project. Cryptohitters pulls both of these feeds under one page and throws in a bonus of a chart of the last 60 days price action that can be useful for placing a trade.",
       stack_explainer:
-        "React was the clear choice for this project, because of its ease of state management and the amount of packages available. We also utilized Netlify as a server to host Decore, because it allows live updates alongside github. In the future, we hope to add Redux to this project to clean up the states a bit, and we also are looking into a backend that can allow writing to files so users can download the code right to their computer.",
+        "The data for the app is provided by the CoinMarketCap, Reddit and CryptoCompare APIs. Chart.js was really useful for putting together a chart to show the previous 60 day’s price action for each asset.",
       code_link: "https://github.com/johngribbin/crypto-hitters",
       live_link: "https://cryptohitters.com"
     }
@@ -162,21 +162,23 @@
         <div class="project__content-wrapper">
           <h1>{project.title}</h1>
           <p>{project.description}</p>
-          <!-- <p>{project.purpose}</p> -->
+          <p>{project.purpose}</p>
           <ul>
             {#each project.stack as item}
               <li>{item}</li>
             {/each}
           </ul>
-          <!-- <p>{project.stack_explainer}</p> -->
+          <p>{project.stack_explainer}</p>
           <div class="project__links-wrapper">
-            <a
-              class="project__link-button"
-              href={project.live_link}
-              target="_blank"
-              rel="noopener noreferrer">
-              VIEW APP
-            </a>
+            {#if project.live_link}
+              <a
+                class="project__link-button"
+                href={project.live_link}
+                target="_blank"
+                rel="noopener noreferrer">
+                VIEW APP
+              </a>
+            {/if}
             <a
               class="project__link-button"
               href={project.code_link}

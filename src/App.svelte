@@ -46,24 +46,35 @@
   {#if visible}
     <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
       <p>
-        Inspired by the Bitcoin whitepaper I decided it was time to learn to
-        code.
+        Hey, Im John. I write code and
+        <a
+          href="https://open.spotify.com/artist/6lqOL0LrdugmRcz6fPE3IF"
+          target="_blank"
+          rel="noopener noreferrer">
+          tunes.
+        </a>
       </p>
 
       <p>
-        Currently I lead all front-end development at
+        I lead all front-end development for the
         <a
           href="https://consensys.space"
           target="_blank"
           rel="noopener noreferrer">
-          ConsenSys Space.
+          Space
+        </a>
+        team at
+        <a
+          href="https://consensys.net"
+          target="_blank"
+          rel="noopener noreferrer">
+          ConsenSys.
         </a>
         We build awesome open-source collaboration platforms to diversify,
         democratize, and decentralize space endeavors.
       </p>
       <p>
-        Although I am framework agnostic, my personal favorites are React and
-        Svelte.
+        I'm framework agnostic but my personal favorites are React and Svelte.
       </p>
 
       <Socials />
