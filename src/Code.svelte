@@ -111,7 +111,7 @@
   }
 
   .project__content-wrapper li {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0.25em 1.5em 0.25em 0.5em;
   }
