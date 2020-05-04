@@ -9,11 +9,11 @@
         "https://live.staticflickr.com/65535/49797961373_70a4eab969_o.jpg",
       description:
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
-      stack: ["React", "Sass", "Ethers.js", "AWS"],
+      stack: ["React", "Sass", "Ethers.js", "AWS", "Docusaurus"],
       purpose:
-        "This project was created with the goal of providing the world with a community driven and fully transparent alternative to the centralized services that offer orbital prediction data for satellites. The big challenge for us was to combine education on the “sport” of tracking satellites and at the same time ensure that the UX was optimal. We paired the app with docs that are as much about learning how to track a sat as they are about submitting data to the platform.",
+        "Tracking satellites is a little tricky! The big challenge was to provide an accessible combination of educational tools and solid UX to help on-board those who are unfamiliar with the sport.",
       stack_explainer:
-        "All state management is handled by React Hooks, without the need for an additional library like Redux. All users are identified by their pseudonymous Ethereum addresses, with authentication aided with the help of Ethers.js and the MetaMask plugin. We also built a custom signup experience that encrypts an Ethereum wallet and emails this to the user as a “secret” to allow users to identify themselves. All assets are stored in AWS S3 buckets.",
+        "All state management is handled by React Hooks, without the need for an additional library like Redux. All users are identified by their pseudonymous Ethereum address, with authentication aided by Ethers.js and the MetaMask plugin. A custom email/password signup experience was created to onboard users via encrypted Ethereum wallets. All assets are stored in AWS S3 buckets. The docs were built with a Docusaurus starter.",
       code_link: "https://github.com/TruSat/trusat-frontend",
       live_link: "https://trusat.org/"
     },
@@ -25,9 +25,9 @@
         "Mobile application to demonstrate a novel Ethereum onboarding experience using counter-factually deployed smart contracts",
       stack: ["React Native", "Redux", "Formik", "Ethers.js", "Expo"],
       purpose:
-        "This was an R&D project at ConsenSys to showcase a new way to on-boarding users to the Ethereum network that was made possible by the introduction of the CREATE2 opcode. In a nutshell, decentralized app users can now receive and withdraw tokens from their account without requiring the additional step of acquiring Ether to pay transaction costs. The transaction fees are instead covered by the application, after getting permission to debit the tokens the equivalent amount. The biggest challenge was abstracting as much complexity away from the user as possible while at same time being transparent about the permissions that the user was granting to the app creators under the hood.",
+        "This was an R&D project to showcase a new way to on-boarding users to the Ethereum network that was made possible by the introduction of the CREATE2 opcode. In a nutshell, decentralized app users can now receive and withdraw tokens from their account without requiring the additional step of acquiring Ether to pay transaction costs. The biggest challenge was abstracting a bunch of complexity away from the user while at the same time being transparent about the permissions that the user was granting to the app creators under the hood.",
       stack_explainer:
-        "I used React-Native to build out the app. As the state for the application grew I decided to introduce Redux to handle the state management.",
+        "React-Native was used to build out the app. As the state for the application, Redux was introduced to handle state management.",
       code_link: "https://github.com/johngribbin/tractor-beam",
       live_link: null
     },
@@ -39,9 +39,9 @@
         "A Ethereum smart-contract research project to examine permissioning.",
       stack: ["React", "Solidity", "Truffle", "ethers.js"],
       purpose:
-        "I created this project at ConsenSys Space to help provide an example to my team mates of how smart contract permissions could be used for community curation of satellite observations in TruSat. On page loads a “burner wallet” is generated in the browser to provide the user with a unique Ethereum address (a pseudonymous identity). After adding some test-net Ether to their address, visitors can clicking the “confirm” button under each picture to update the state of a smart contract. This step essentially symbolizes how anyone could add a vote of confidence to a sat observation. Some of the permissions in the contract prevent Ethereum addresses that submit observations from voting on their own submissions.",
+        "I created this project to provide an example to my team mates of how smart contract permissions could be used for community curation of satellite observations in TruSat. A “burner wallet” with a unique Ethereum address is generated for each visitor to the page (a pseudonymous identity). After procuring some test-net Ether to their address, visitors can click the “confirm” button under each picture to update the state of a smart contract. This process is symbolic of how anyone (permission-less) could add a vote of confidence to a satellite observation. Permissions in the contract include a check to prevent Ethereum addresses that submit observations from voting on their own submissions.",
       stack_explainer:
-        "I used Truffle to deploy the smart contracts to an Ethereum testnet. The front end was built with React, and Ethers.js was used to help interact with the deployed smart contract. ",
+        "Truffle was used to deploy the smart contract. The front end was built with React, and Ethers.js was used to help users interact with the smart contract.",
       code_link: "https://github.com/johngribbin/ssa-toshi",
       live_link: "https://ssatoshi.surge.sh/"
     },
@@ -53,7 +53,7 @@
         "A web app that brings together price changes in crypto assets and the news/gossip that may have caused them.",
       stack: ["React", "Chart.js", "Netlify"],
       purpose:
-        "When I first got interested in the cryptocurrency space I would spend a lot of time jumping between websites that offer price data and various reddit forums that gather gossip or news about a given project. Cryptohitters pulls both of these feeds under one page and throws in a bonus of a chart of the last 60 days price action that can be useful for placing a trade.",
+        "When I first got interested in the cryptocurrency space I would spend a lot of time jumping between price data sites and reddit forums that gather gossip or news about a given project. Cryptohitters pulls both of these feeds into one place.",
       stack_explainer:
         "The data for the app is provided by the CoinMarketCap, Reddit and CryptoCompare APIs. Chart.js was really useful for putting together a chart to show the previous 60 day’s price action for each asset.",
       code_link: "https://github.com/johngribbin/crypto-hitters",
@@ -91,6 +91,10 @@
 
   .project__content-wrapper {
     width: 550px;
+  }
+
+  .project__content-wrapper h1 {
+    margin-bottom: 0.5em;
   }
 
   .project__content-wrapper p {
@@ -161,7 +165,7 @@
 
         <div class="project__content-wrapper">
           <h1>{project.title}</h1>
-          <p>{project.description}</p>
+          <h2>{project.description}</h2>
           <p>{project.purpose}</p>
           <ul>
             {#each project.stack as item}

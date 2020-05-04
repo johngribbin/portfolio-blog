@@ -26,8 +26,7 @@
     max-width: 550px;
   }
 
-  p {
-    font-size: 18px;
+  h2 {
     margin-bottom: 1em;
   }
 
@@ -45,50 +44,24 @@
 <main>
   {#if visible}
     <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
-      <p>
-        Hey, Im John. I write code and
-        <a
-          href="https://open.spotify.com/artist/6lqOL0LrdugmRcz6fPE3IF"
-          target="_blank"
-          rel="noopener noreferrer">
-          tunes.
-        </a>
-      </p>
-
-      <p>
-        I lead all front-end development for the
-        <a
-          href="https://consensys.space"
-          target="_blank"
-          rel="noopener noreferrer">
-          Space
-        </a>
-        team at
-        <a
-          href="https://consensys.net"
-          target="_blank"
-          rel="noopener noreferrer">
-          ConsenSys.
-        </a>
-        We build awesome open-source collaboration platforms to diversify,
-        democratize, and decentralize space endeavors.
-      </p>
-      <p>
-        I'm framework agnostic but my personal favorites are React and Svelte.
-      </p>
-
+      <h2>Hey, Im John.</h2>
+      <h2>
+        I am a front-end developer with a passion for all things open-source and
+        Bitcoin. I'm framework agnostic but my personal favorites are React and
+        Svelte.
+      </h2>
       <Socials />
     </div>
   {/if}
 
   <section>
-    {#if $skill === 'music'}
-      <Music />
-    {:else if $skill === 'code'}
-      <Code />
-    {:else if $skill === 'words'}
+    <!-- {#if $skill === 'music'}
+      <Music /> -->
+    <!-- {:else if $skill === 'code'} -->
+    <Code />
+    <!-- {:else if $skill === 'words'}
       <Words />
-    {/if}
+    {/if} -->
   </section>
 
 </main>

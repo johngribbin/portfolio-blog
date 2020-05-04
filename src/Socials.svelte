@@ -17,7 +17,7 @@
     margin-left: 1em;
   }
 
-  p {
+  h2 {
     margin-left: 1em;
   }
 </style>
@@ -40,5 +40,5 @@
       alt="github" />
   </a>
 
-  <p>johngribbin @ protonmail.com</p>
+  <h2>johnggribbin @ gmail.com</h2>
 </div>
