@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -136,39 +136,38 @@ body {
 }
 
 body {
-  color: black;
+  background: black;
+  color: white;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  line-height: 1.2;
+  font-family: "Roboto Mono", monospace;
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.2;
 }
 
 p {
-  font-size: 20px;
-  line-height: 1.3;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 a {
-  color: rgb(0, 100, 200);
+  color: white;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  color: rgb(0, 80, 160);
 }
 
 label {
@@ -192,13 +191,7 @@ input:disabled {
   color: #ccc;
 }
 
-input[type="range"] {
-  height: 0;
-}
-
 button {
-  color: #333;
-  background-color: #f4f4f4;
   outline: none;
 }
 

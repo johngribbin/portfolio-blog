@@ -17,38 +17,52 @@
 
 <style>
   main {
+    max-width: 1200px;
     margin: 4em auto;
-    max-width: 1150px;
+    padding: 0 2em;
   }
 
   .copy {
-    margin-bottom: 6em;
-    max-width: 550px;
+    width: 50%;
   }
 
   h2 {
-    margin-bottom: 1em;
+    margin: 0.75em 0;
   }
 
-  @media (max-width: 600px) {
+  a {
+    text-decoration: underline;
+  }
+  /* Tablet */
+  @media (max-width: 1000px) {
     main {
-      margin-top: 2em;
+      max-width: 800px;
     }
 
     .copy {
-      padding: 0em 1em 0em 1em;
+      width: 100%;
     }
+  }
+
+  /* Phone */
+  @media (max-width: 400px) {
   }
 </style>
 
 <main>
   {#if visible}
     <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
-      <h2>Hey, Im John.</h2>
+      <h1>Hey, Im John.</h1>
       <h2>
-        I am a front-end developer with a passion for all things open-source and
-        Bitcoin. I'm framework agnostic but my personal favorites are React and
-        Svelte.
+        I am a front-end developer with a passion for all things open-source,
+        Bitcoin and Ethereum. I also make
+        <a
+          href="https://soundcloud.com/tampermusic"
+          target="_blank"
+          rel="noopener noreferrer">
+          music.
+        </a>
+
       </h2>
       <Socials />
     </div>

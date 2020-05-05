@@ -11,7 +11,7 @@
         "A citizen-powered, open source system for creating a globally-accessible, trusted record of satellite orbital positions.",
       stack: ["React", "Sass", "Ethers.js", "AWS", "Docusaurus"],
       purpose:
-        "Tracking satellites is a little tricky! The big challenge was to provide an accessible combination of educational tools and solid UX to help on-board those who are unfamiliar with the sport.",
+        "Tracking satellites is a little tricky! The big challenge was to provide an accessible combination of educational tools with solid UX to help on-board those who are unfamiliar with the sport.",
       stack_explainer:
         "All state management is handled by React Hooks, without the need for an additional library like Redux. All users are identified by their pseudonymous Ethereum address, with authentication aided by Ethers.js and the MetaMask plugin. A custom email/password signup experience was created to onboard users via encrypted Ethereum wallets. All assets are stored in AWS S3 buckets. The docs were built with a Docusaurus starter.",
       code_link: "https://github.com/TruSat/trusat-frontend",
@@ -70,49 +70,42 @@
 
 <style>
   .project {
+    border: 1px solid rgba(14, 237, 207, 0.2);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px rgba(14, 237, 207, 0.3);
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 5em;
+    margin-top: 6em;
+    padding: 2em 1em;
   }
 
   .project__image-container {
-    margin: 0em 3em 1em 0em;
-    width: 550px;
+    margin-right: 2em;
+    width: 50%;
   }
 
   .project__image-container img {
-    box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.3);
+    display: block;
+    height: auto;
     width: 100%;
   }
 
-  .project p {
-    margin-bottom: 1em;
-  }
-
   .project__content-wrapper {
-    width: 550px;
+    width: 50%;
   }
 
-  .project__content-wrapper h1 {
-    margin-bottom: 0.5em;
-  }
-
-  .project__content-wrapper p {
-    margin-top: 1em;
+  .project__content-wrapper h2 {
+    font-style: italic;
+    margin: 0.75em 0;
   }
 
   .project__content-wrapper ul {
-    color: black;
     display: flex;
     flex-wrap: wrap;
     list-style-type: circle;
-    margin-bottom: 1em;
-    margin-left: 0.7em;
+    margin: 1em;
   }
 
   .project__content-wrapper li {
-    font-size: 20px;
-    font-weight: bold;
     margin: 0.25em 1.5em 0.25em 0.5em;
   }
 
@@ -123,31 +116,39 @@
 
   .project__link-button {
     align-items: center;
+    background: black;
     border-radius: 5px;
-    color: black;
-    border: 2px solid black;
+    border: 2px solid white;
+    color: white;
     display: flex;
     font-weight: bold;
     margin-right: 1em;
     padding: 0.75em;
   }
 
-  .project__link-button img {
-    margin-right: 0.5em;
-    width: 32px;
+  .project__link-button:hover {
+    border-color: rgba(14, 237, 207, 0.8);
+    color: rgba(14, 237, 207, 0.8);
   }
 
-  @media (max-width: 800px) {
+  /* Tablet */
+  @media (max-width: 1000px) {
+    .project {
+      flex-wrap: wrap;
+    }
+
     .project__image-container {
-      margin: 0em 0em 1em 0em;
+      margin-right: 0em;
+      width: 100%;
+    }
+
+    .project__image-container img {
+      width: 100%;
     }
 
     .project__content-wrapper {
-      padding: 0em 2em 0em 2em;
-    }
-
-    .project__content-wrapper h1 {
-      margin-top: 0.75em;
+      margin-top: 2em;
+      width: 100%;
     }
   }
 </style>
@@ -156,11 +157,8 @@
   {#if visible}
     {#each projects as project}
       <div in:fade={{ duration: 1000 }} class="project">
-        <div class="project__image-container photo">
+        <div class="project__image-container">
           <img src={project.imgSrc} alt={project.title} />
-          <div class="glow-wrap">
-            <i class="glow" />
-          </div>
         </div>
 
         <div class="project__content-wrapper">
@@ -169,7 +167,9 @@
           <p>{project.purpose}</p>
           <ul>
             {#each project.stack as item}
-              <li>{item}</li>
+              <li>
+                <p>{item}</p>
+              </li>
             {/each}
           </ul>
           <p>{project.stack_explainer}</p>
@@ -180,7 +180,7 @@
                 href={project.live_link}
                 target="_blank"
                 rel="noopener noreferrer">
-                VIEW APP
+                APP
               </a>
             {/if}
             <a
@@ -188,9 +188,6 @@
               href={project.code_link}
               target="_blank"
               rel="noopener noreferrer">
-              <img
-                src="https://live.staticflickr.com/65535/49798531141_f7e30a48c0_t.jpg"
-                alt="github" />
               CODE
             </a>
           </div>
