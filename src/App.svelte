@@ -2,11 +2,8 @@
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
   import { quintOut } from "svelte/easing";
-  import { skill } from "./stores.js";
   import Socials from "./Socials.svelte";
   import Code from "./Code.svelte";
-  import Music from "./Music.svelte";
-  import Words from "./Words.svelte";
 
   let visible = false;
 
@@ -33,6 +30,12 @@
   a {
     text-decoration: underline;
   }
+
+  footer {
+    margin-top: 10em;
+    text-align: center;
+  }
+
   /* Tablet */
   @media (max-width: 1000px) {
     main {
@@ -46,6 +49,9 @@
 
   /* Phone */
   @media (max-width: 400px) {
+    main {
+      padding: 0 1em;
+    }
   }
 </style>
 
@@ -67,15 +73,10 @@
       <Socials />
     </div>
   {/if}
-
-  <section>
-    <!-- {#if $skill === 'music'}
-      <Music /> -->
-    <!-- {:else if $skill === 'code'} -->
-    <Code />
-    <!-- {:else if $skill === 'words'}
-      <Words />
-    {/if} -->
-  </section>
-
+  <Code />
+  <footer>
+    <a href="https://github.com/johngribbin/portfolio_2020">
+      This website is open-source
+    </a>
+  </footer>
 </main>

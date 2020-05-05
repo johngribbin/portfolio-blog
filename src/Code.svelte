@@ -151,6 +151,20 @@
       width: 100%;
     }
   }
+
+  /* Phone */
+  @media (max-width: 400px) {
+    .project {
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .project__image-container img {
+      border: 1px solid grey;
+      width: 100%;
+    }
+  }
 </style>
 
 <section>
