@@ -1,6 +1,6 @@
-# svelte app
+# [johnggribbin.com](https://johnggribbin.com)
 
-[johnggribbin.com](https://johnggribbin.com)
+## svelte app
 
 This portfolio site was bootstrapped with a template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
