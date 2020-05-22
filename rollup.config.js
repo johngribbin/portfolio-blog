@@ -3,9 +3,9 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
+import { markdown } from "svelte-preprocess-markdown";
 
 const production = !process.env.ROLLUP_WATCH;
-const { markdown } = require("svelte-preprocess-markdown");
 
 export default {
   input: "src/main.js",
