@@ -47,11 +47,7 @@
 <main>
   <nav>
     <a href={'/'} class:active={$isActive('./index')}>Home</a>
-    <a
-      href={'/blog/01_my_first_post'}
-      class:active={$isActive('/blog/01_my_first_post')}>
-      Blog
-    </a>
+    <a href={'/blog'} class:active={$isActive('/blog')}>Blog</a>
   </nav>
   <slot />
 </main>
