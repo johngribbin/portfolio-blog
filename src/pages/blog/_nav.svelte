@@ -9,14 +9,12 @@
 
 <style>
   nav {
-    border-right: 1px solid rgba(14, 237, 207, 0.3);
     display: flex;
-    flex-direction: column;
-    padding-right: 1em;
+    margin-bottom: 5em;
   }
 
   a {
-    margin-bottom: 1em;
+    margin-right: 1em;
   }
 
   a:hover {
