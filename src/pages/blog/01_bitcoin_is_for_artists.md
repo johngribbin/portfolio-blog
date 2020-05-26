@@ -1,6 +1,6 @@
 # Bitcoin is for Artists
 
-I fell down the Bitcoin rabbit hole in 2017. Before that I was singing songs for a living, spending my time between New York, Nashville and Los Angeles chasing a dream. My goal for this post is to present what I feel is the most beneficial knowledge I have gained since then. If I can provide a single fellow artist with a better understanding of the merits of Bitcoin I'll be happy.
+I fell down the Bitcoin rabbit hole in 2017. It was the catalyst that inspired me to learn how to code. Up until then I was singing songs for a living. I would spend my time between New York, Nashville and Los Angeles chasing a dream. My goal for this post is to present what I feel is the most beneficial knowledge I have gained since then. If I can provide a single fellow artist with a better understanding of the merits of Bitcoin I'll be happy.
 
 <div align='center'>
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1600%2F1*7LzhJXDIubcYIOzWKBRaMA.jpeg&f=1&nofb=1" alt="Rabbit hole" style='width:100%; max-width:800px;' />
