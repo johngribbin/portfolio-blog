@@ -3,7 +3,7 @@
 I fell down the Bitcoin rabbit hole in 2017. Before that I was singing songs for a living, spending my time between New York, Nashville and Los Angeles chasing a dream. My goal for this post is to present what I feel is the most beneficial knowledge I have gained since then. If I can provide a single fellow artist with a better understanding of the merits of Bitcoin I'll be happy.
 
 <div align='center'>
-![bitcoin rabbit hole](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1600%2F1*7LzhJXDIubcYIOzWKBRaMA.jpeg&f=1&nofb=1)
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1600%2F1*7LzhJXDIubcYIOzWKBRaMA.jpeg&f=1&nofb=1" alt="Rabbit hole" style='width:100%; max-width:800px;' />
 </div>
 <!-- ## Scarcity -->
 
@@ -28,7 +28,9 @@ Who is responsible for a nations money supply growth? That would be the Central 
 QE is just a fancy way of describing the process of printing money (increasing the supply) to purchase things like government debt. We saw this process begin all around the world as a response to the global financial crisis in [2008](https://www.cnbc.com/2017/11/24/the-fed-launched-qe-nine-years-ago--these-four-charts-show-its-impact.html) and again more [recently](https://www.cnbc.com/2020/03/15/federal-reserve-cuts-rates-to-zero-and-launches-massive-700-billion-quantitative-easing-program.html).
 
 <div align='center'>
-![printer go brrr](https://media1.tenor.com/images/6a97a5389e9a59e3241beba916ec14ad/tenor.gif?itemid=17266014)
+<img src="https://media1.tenor.com/images/6a97a5389e9a59e3241beba916ec14ad/tenor.gif?itemid=17266014" alt="Printer go brrr"
+	 style='width:100%;
+    max-width:600px;' />
 </div>
 
 <!-- ## Cantillon Effect -->
@@ -65,7 +67,9 @@ While all of this is true, many of us (at least not yet) have never experienced 
 > -- <cite>Nassim Nicholas Taleb</cite>
 
 <div align='center'>
-![To the moon](https://media0.giphy.com/media/7FBY7h5Psqd20/giphy.gif?cid=ecf05e4709742e4c5d35de2a3bce17574d053106f6e190be&rid=giphy.gif)
+<img src="https://media0.giphy.com/media/7FBY7h5Psqd20/giphy.gif?cid=ecf05e4709742e4c5d35de2a3bce17574d053106f6e190be&rid=giphy.gif" alt="To the moon"
+	 style='width:100%;
+    max-width:600px;' />
 </div>
 
 If history is anything to go by, we should be aware that central banks will usually find a reason to increase the supply of fiat currencies. Whether it is bailing out failed businesses or funding another war, the value of your savings is at the mercy of a small group of people with little to no oversight. I used to believe that institutions like governments and banks would do bad things because they were evil. As I have gotten older I tend to put it down to plain old incompetence. There are many [examples](https://listverse.com/2012/12/26/10-fascinating-economic-collapses-through-history/) of such behavior leading to the fall of widely adopted currencies. It begs the question, why would it not happen again?
@@ -75,7 +79,7 @@ Neel Kashkari, president of the Federal Reserve Bank of Minneapolis, was asked i
 > _"There is no end to our ability to do that."_
 > ([src](https://www.youtube.com/watch?v=DUrlNHTxuJM))
 
-By simply allocating a percentage of my savings into Bitcoin I like to think that I am purchasing an insurance policy. Some like to trade Bitcoin, but I prefer to just hold. I find this long-term thinking approach to be a comforting juxtaposition to the antics of those at the helm of traditional currencies. For as long as the hard cap of 21 million is in place, I will hold. Bitcoin is still an experiment. It may fail, and you should only ever invest a sum of money that you are willing to lose. The rabbit hole has been a long and winding road with many articles, documentaries and books consumed. Here is some further reading that I highly recommend if you wish to learn more:
+By simply allocating a percentage of my savings into Bitcoin I like to think that I am purchasing an insurance policy. Some like to trade Bitcoin, but I prefer to just hold. I find this long-term investment approach to be a comforting juxtaposition to the short-sighted antics of those at the helm of traditional currencies. For as long as the hard cap of 21 million is in place, I will hold. Bitcoin is still an experiment. It may fail, and you should only ever invest a sum of money that you are willing to lose. The rabbit hole has been a long and winding road with many articles, documentaries and books consumed. Here is some further reading that I highly recommend:
 
 - [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf) - Penned by Satoshi. Where I started, and so should you.
 - [The Bitcoin Standard](https://www.amazon.com/Bitcoin-Standard-Decentralized-Alternative-Central/dp/1119473861) - A great book that helped me understand better the history of money.
