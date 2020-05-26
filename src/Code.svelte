@@ -93,7 +93,7 @@
     width: 50%;
   }
 
-  .project__content-wrapper h2 {
+  .project__content-wrapper h3 {
     font-style: italic;
     margin: 0.75em 0;
   }
@@ -102,11 +102,20 @@
     display: flex;
     flex-wrap: wrap;
     list-style-type: circle;
-    margin: 1em;
+    margin: 0;
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+    padding: 0;
+    vertical-align: baseline;
   }
 
   .project__content-wrapper li {
-    margin: 0.25em 1.5em 0.25em 0.5em;
+    border: 1px solid white;
+    height: 2em;
+    margin: 0em 2em 0em 0.25em;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
   }
 
   .project__links-wrapper {
@@ -124,6 +133,7 @@
     font-weight: bold;
     margin-right: 1em;
     padding: 0.75em;
+    text-decoration: none;
   }
 
   .project__link-button:hover {
@@ -177,7 +187,7 @@
 
         <div class="project__content-wrapper">
           <h1>{project.title}</h1>
-          <h2>{project.description}</h2>
+          <h3>{project.description}</h3>
           <p>{project.purpose}</p>
           <ul>
             {#each project.stack as item}

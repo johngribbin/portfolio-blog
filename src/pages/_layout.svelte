@@ -25,8 +25,10 @@
 
   .active {
     color: rgba(14, 237, 207, 0.8);
-    text-decoration: underline;
-    text-decoration-color: rgba(14, 237, 207, 0.8);
+  }
+
+  a:hover {
+    color: rgba(14, 237, 207, 0.8);
   }
 
   /* Tablet */

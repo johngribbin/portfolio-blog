@@ -54,8 +54,7 @@ If history is anything to go by then it stands to reason that central banks will
 When Neel Kashkari, president of the Federal Reserve Bank of Minneapolis, was asked if the fed was "essentially flooding the system with money", he agreed and said:
 
 > "There is no end to our ability to do that."
->
-> > <cite>[Source](https://www.youtube.com/watch?v=DUrlNHTxuJM)</cite>
+> ([src](https://www.youtube.com/watch?v=DUrlNHTxuJM))
 
 By simply allocating a small sum of your savings into Bitcoin I like to think that I am purchasing a reasonable insurance policy against fiat currency failure. It doesn't have to your currency, Bitcoin serves as an out for citizens of every country. Never forget that Bitcoin is an experiment. It may fail, and you should only invest a sum of money that you are willing to lose. If you decide to invest I can't stress enough the importance of thinking of your purchase as a long term investment. I say this because the short term price volatility of Bitcoin can be scary to a lot of people. History has shown that those who simply acquire and hold for long periods tend to be rewarded. It is this reward for saving that may be needed more than ever if the central bankers continue their own experiment.
 
