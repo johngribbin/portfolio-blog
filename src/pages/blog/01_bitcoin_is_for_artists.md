@@ -7,7 +7,7 @@ I fell down the Bitcoin rabbit hole in 2017. Before that I was singing songs for
 </div>
 <!-- ## Scarcity -->
 
-Almost everyone is familiar with how scarcity of an item will cause demand to increase, which in turn cause the price to do the same. Think of tickets for a sold-out concert as an example. Take a second to think of another example... Anyone think of money? Or more specifically, fiat currencies? I’m gonna guess not many of you did. If you asked me a few years ago I would have probably rhymed off 100 different physical items before even thinking about euros, dollars or pesos. Bitcoin fundamentally changed how I think about money. I'll explain...
+Almost everyone is familiar with how an items perceived scarcity will cause demand for it to increase, which in turn causes the price to do the same. Think of tickets for a sold-out concert as an example. Take a second to think of another example... Anyone think of money? Or more specifically, fiat currencies? I’m gonna guess not many of you did. If you asked me a few years ago I would have probably rhymed off 100 different physical items before even thinking about euros, dollars or pesos. Bitcoin fundamentally changed how I think about money. I'll explain...
 
 <!-- ## Inflation -->
 
