@@ -10,7 +10,7 @@
 <style>
   nav {
     display: flex;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
   }
 
   a {
@@ -35,9 +35,8 @@
         {tidyTitle(node.title)}
       </a>
     {/if}
-    <!-- 
-      For nested directories in the 'blog' directory
-      {#if node.children.length}
+    <!-- For nested directories in the 'blog' directory
+    {#if node.children.length}
       <svelte:self {node} />
     {/if} -->
   {/each}

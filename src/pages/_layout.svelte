@@ -12,7 +12,7 @@
   nav {
     border-bottom: 1px solid rgba(14, 237, 207, 0.3);
     display: flex;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
     padding-bottom: 0.5em;
     font-size: 18px;
     font-weight: 300;

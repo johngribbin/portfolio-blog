@@ -2,7 +2,7 @@
   import { Router } from "@sveltech/routify";
   import { routes } from "@sveltech/routify/tmp/routes";
   import { onMount } from "svelte";
-  import { slide } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import Socials from "../Socials.svelte";
   import Code from "../Code.svelte";
 
@@ -15,6 +15,7 @@
 
 <style>
   .copy {
+    margin-top: 5em;
     width: 50%;
   }
 
@@ -35,7 +36,7 @@
 </style>
 
 {#if visible}
-  <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
+  <div transition:fade={{ delay: 250, duration: 300 }} class="copy">
     <h1>Hey, Im John.</h1>
     <h2>
       I am a front-end developer with a passion for all things open-source,

@@ -70,9 +70,9 @@
 
 <style>
   .project {
-    border: 1px solid rgba(14, 237, 207, 0.3);
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px 0px rgba(14, 237, 207, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.3);
     display: flex;
     margin-top: 6em;
     padding: 2em 1em;
