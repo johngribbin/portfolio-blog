@@ -74,13 +74,15 @@ While all of this is true, many of us (at least not yet) have never experienced 
 
 If history is anything to go by, we should be aware that central banks will usually find a reason to increase the supply of fiat currencies. Whether it is bailing out failed businesses or funding another war, the value of your savings is at the mercy of a small group of people with little to no oversight. I used to believe that institutions like governments and banks would do bad things because they were evil. As I have gotten older I tend to put it down to plain old incompetence. There are many [examples](https://listverse.com/2012/12/26/10-fascinating-economic-collapses-through-history/) of such behavior leading to the fall of widely adopted currencies. It begs the question, when will it happen again?
 
-Neel Kashkari, president of the Federal Reserve Bank of Minneapolis, was asked if the fed was _"essentially flooding the system with money"_, he agreed and said:
+In March of 2020, Neel Kashkari (President of the Federal Reserve Bank of Minneapolis) was asked if the Federal Reserve was _"essentially flooding the system with money"_, he agreed and said:
 
 > _"There is no end to our ability to do that."_
 > ([src](https://www.youtube.com/watch?v=DUrlNHTxuJM))
 
-By simply allocating a percentage of my savings into Bitcoin I like to think that I am purchasing an insurance policy. Some like to trade Bitcoin, but I prefer to just hold. I find this long-term investment approach to be a comforting juxtaposition to the short-sighted antics of those at the helm of traditional currencies. For as long as the hard cap of 21 million is in place, I will hold. Bitcoin is still an experiment. It may fail, and you should only ever invest a sum of money that you are comfortable living without. The rabbit hole has been a long and winding road with many articles, documentaries and books consumed. Here is some further reading that I highly recommend:
+The short-sighted antics of those in control of fiat currency supply make Bitcoin a very appealing alternative. By simply allocating a percentage of my savings into Bitcoin I like to think that I am purchasing an insurance policy; one that I'll be holding for the long-term.
+
+Bitcoin is still an experiment. It may fail, and you should only ever invest a sum of money that you are comfortable living without. Here is some further reading that I highly recommend:
 
 - [Bitcoin white paper](https://bitcoin.org/bitcoin.pdf) - Penned by Satoshi. Where I started, and so should you.
 - [The Bitcoin Standard](https://www.amazon.com/Bitcoin-Standard-Decentralized-Alternative-Central/dp/1119473861) - A great book that helped me understand better the history of money.
-- [Antifragile: Things That Gain from Disorder](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1590511162&sr=1-1) - Where I learned about the idea of asymmetric opportunities.
+- [Antifragile: Things That Gain from Disorder](https://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1590511162&sr=1-1) - A book packed with wisdom, and where I learned of the notion of asymmetric opportunities.
