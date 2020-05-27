@@ -1,8 +1,8 @@
-# [johnggribbin.com](https://johnggribbin.com)
+# Personal Portfolio / Blog site
 
 ## svelte app
 
-This portfolio site was bootstrapped with a template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+This portfolio/blog site was bootstrapped with a template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
 _Note that you will need to have [Node.js](https://nodejs.org) installed._
 
