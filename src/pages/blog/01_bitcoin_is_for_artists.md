@@ -1,5 +1,7 @@
 # Bitcoin is for Artists
 
+#### May 2020
+
 I fell down the Bitcoin rabbit hole in 2017. It was the catalyst that inspired me to learn how to code. Up until then I was singing songs for a living. I would spend my time between New York, Nashville and Los Angeles chasing a dream. My goal for this post is to present what I feel is the most beneficial knowledge I have gained since then. If I can provide a single fellow artist with a better understanding of the merits of Bitcoin I'll be happy.
 
 <div align='center'>
