@@ -15,7 +15,7 @@
       stack_explainer:
         "All state management is handled by React Hooks, without the need for an additional library like Redux. All users are identified by their pseudonymous Ethereum address, with authentication aided by Ethers.js and the MetaMask plugin. A custom email/password signup experience was created to onboard users via encrypted Ethereum wallets. All assets are stored in AWS S3 buckets. The docs were built with a Docusaurus starter.",
       code_link: "https://github.com/TruSat/trusat-frontend",
-      live_link: "https://trusat.org/"
+      live_link: null,
     },
     {
       title: "Tractor Beam",
@@ -57,7 +57,7 @@
       stack_explainer:
         "The data for the app is provided by the CoinMarketCap, Reddit and CryptoCompare APIs. Chart.js was really useful for putting together a chart to show the previous 60 day’s price action for each asset.",
       code_link: "https://github.com/johngribbin/crypto-hitters",
-      live_link: "https://cryptohitters.com"
+      live_link: null,
     }
   ];
 

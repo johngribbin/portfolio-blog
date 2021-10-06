@@ -60,8 +60,8 @@
     <div transition:slide={{ delay: 250, duration: 300 }} class="copy">
       <h1>Hey, Im John.</h1>
       <h2>
-        I am a front-end developer with a passion for all things open-source,
-        Bitcoin and Ethereum. I also make
+        I am a front-end developer with a passion for all things open-source and
+        Bitcoin. I also make
         <a
           href="https://soundcloud.com/tampermusic"
           target="_blank"
